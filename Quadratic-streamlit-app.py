@@ -19,7 +19,12 @@ X = st.number_input(
     min_value = 0.000,
     max_value = 10.000,
     value=5.000)
-
+st.sidebar.title("About This App")
+st.sidebar.markdown("""
+This app uses a quadratic regression model to predict outcomes based on a single input variable **X**.
+Quadratic models are useful when the relationship between variables is curved rather than linear.
+Try entering different values to see how predictions change!
+""")
 # Submit inputs to model
 
 if st.button("Submit For Prediction"):
@@ -35,4 +40,8 @@ if st.button("Submit For Prediction"):
     
     # Output prediction
     
+
     st.subheader(f"Based on the X value provided, the predicted value is {pred_value:.2f}")
+
+st.markdown("---")
+st.markdown("Created by Santhosh | Powered by Streamlit & scikit-learn")
